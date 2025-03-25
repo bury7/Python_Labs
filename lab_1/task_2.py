@@ -10,8 +10,8 @@ def update_inventory(inventory: dict, product: str, quantity: int) -> None:
         inventory[product] = quantity
 
 
-def stock_products(inventory: dict, count: int = 5) -> list:
-    return [product for product, quantity in inventory.items() if quantity < count]
+def stock_products(inventory: dict, min_quantity: int = 5) -> list:
+    return [product for product, quantity in inventory.items() if quantity < min_quantity]
 
 
 def main() -> None:
