@@ -10,8 +10,8 @@ def update_inventory(inventory: dict, product: str, quantity: int) -> None:
         inventory[product] = quantity
 
 
-def stock_products(inventory: dict, min_quantity: int = 5) -> list:
-    return [product for product, quantity in inventory.items() if quantity < min_quantity]
+def get_products_below_threshold(inventory: dict, quantity_threshold: int = 5) -> list:
+    return [product for product, quantity in inventory.items() if quantity < quantity_threshold]
 
 
 def main() -> None:
@@ -24,7 +24,7 @@ def main() -> None:
 
     print(f"\nInventory after changes:\n{INVENTORY}")
 
-    print(f"\nProducts with quantity less than 5:\n{stock_products(INVENTORY)}")
+    print(f"\nProducts with quantity less than 5:\n{get_products_below_threshold(INVENTORY)}")
 
 
 if __name__ == "__main__":
