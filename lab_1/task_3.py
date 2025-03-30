@@ -52,6 +52,7 @@ def print_high_revenue_products(products: list[str]) -> None:
         print("No products exceed the revenue threshold.")
     print()
 
+
 def main() -> None:
     sales_data = [
         {"product": "Notebook", "quantity": 5, "price": 25000},

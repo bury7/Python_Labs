@@ -7,7 +7,7 @@ class TaskStatus(StrEnum):
     WAITING = "waiting"
 
 
-def add_task(task_name: str, tasks: dict[str, TaskStatus], status: TaskStatus=TaskStatus.WAITING) -> bool:
+def add_task(task_name: str, tasks: dict[str, TaskStatus], status: TaskStatus = TaskStatus.WAITING) -> bool:
     if task_name in tasks or status not in TaskStatus:
         return False
 
@@ -33,7 +33,6 @@ def change_task_status(task_name: str, new_status: TaskStatus, tasks: dict[str, 
 
 def get_tasks_by_status(filter_status: TaskStatus, tasks: dict[str, TaskStatus]) -> dict[str, TaskStatus]:
     return {task: status for task, status in tasks.items() if status == filter_status}
-
 
 
 def print_tasks(title: str, tasks: dict[str, TaskStatus]) -> None:
