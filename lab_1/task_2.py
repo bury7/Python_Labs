@@ -1,4 +1,11 @@
-from constants import INVENTORY
+INVENTORY = {
+    "Apples": 10,
+    "Bananas": 4,
+    "Milk": 8,
+    "Bread": 3,
+    "Cheese": 4,
+    "Fish": 2,
+}
 
 
 def update_inventory(inventory: dict, product: str, quantity: int) -> None:

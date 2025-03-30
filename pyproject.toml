@@ -2,10 +2,19 @@
 name = "python-labs"
 version = "0.1.0"
 description = "University python labs"
-authors = [{ name = "Artem Nizhyvenko", email = "artem_nizhyvenko@proton.me" }]
 readme = "README.md"
+authors = [{ name = "Artem Nizhyvenko", email = "artem_nizhyvenko@proton.me" }]
+
 requires-python = ">=3.13"
-dependencies = ["ruff>=0.11.2"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.11.2"
+]
+
+[project.urls]
+repository = "https://github.com/bury7/Python_Labs"
 
 [tool.ruff]
 exclude = [
@@ -13,8 +22,10 @@ exclude = [
     ".direnv",
     ".eggs",
     ".git",
+    ".github",
     ".git-rewrite",
     ".hg",
+    ".idea",
     ".ipynb_checkpoints",
     ".mypy_cache",
     ".nox",
@@ -27,15 +38,18 @@ exclude = [
     ".tox",
     ".venv",
     ".vscode",
+    "__pycache__",
     "__pypackages__",
     "_build",
     "buck-out",
     "build",
     "dist",
+    "env_files",
     "node_modules",
     "site-packages",
+    "tmp",
     "venv",
-    "__init__.py",
+    "*.ipynb",
 ]
 
 line-length = 119
@@ -57,3 +71,4 @@ quote-style = "double"
 indent-style = "space"
 skip-magic-trailing-comma = false
 line-ending = "auto"
+docstring-code-format = false
