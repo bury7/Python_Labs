@@ -1,20 +1,20 @@
 [project]
-name = "python-labs"
-version = "0.1.0"
+authors     = [{name = "Artem Nizhyvenko", email = "artem_nizhyvenko@proton.me"}]
 description = "University python labs"
-readme = "README.md"
-authors = [{ name = "Artem Nizhyvenko", email = "artem_nizhyvenko@proton.me" }]
+name        = "python-labs"
+readme      = "README.md"
+version     = "0.1.0"
 
-requires-python = ">=3.13"
 dependencies = [
-    "requests>=2.32.3 ",
-    "matplotlib>=3.10.1",
-    "pytz>=2025.2 "
+  "matplotlib>=3.10.1",
+  "pytz>=2025.2",
+  "requests>=2.32.3 ",
 ]
+requires-python = ">=3.13"
 
 [project.optional-dependencies]
 dev = [
-  "ruff>=0.11.2"
+  "ruff>=0.11.2",
 ]
 
 [project.urls]
@@ -22,57 +22,57 @@ repository = "https://github.com/bury7/Python_Labs"
 
 [tool.ruff]
 exclude = [
-    ".bzr",
-    ".direnv",
-    ".eggs",
-    ".git",
-    ".github",
-    ".git-rewrite",
-    ".hg",
-    ".idea",
-    ".ipynb_checkpoints",
-    ".mypy_cache",
-    ".nox",
-    ".pants.d",
-    ".pyenv",
-    ".pytest_cache",
-    ".pytype",
-    ".ruff_cache",
-    ".svn",
-    ".tox",
-    ".venv",
-    ".vscode",
-    "__pycache__",
-    "__pypackages__",
-    "_build",
-    "buck-out",
-    "build",
-    "dist",
-    "env_files",
-    "node_modules",
-    "site-packages",
-    "tmp",
-    "venv",
-    "*.ipynb",
+  "*.ipynb",
+  ".bzr",
+  ".direnv",
+  ".eggs",
+  ".git",
+  ".git-rewrite",
+  ".github",
+  ".hg",
+  ".idea",
+  ".ipynb_checkpoints",
+  ".mypy_cache",
+  ".nox",
+  ".pants.d",
+  ".pyenv",
+  ".pytest_cache",
+  ".pytype",
+  ".ruff_cache",
+  ".svn",
+  ".tox",
+  ".venv",
+  ".vscode",
+  "__pycache__",
+  "__pypackages__",
+  "_build",
+  "buck-out",
+  "build",
+  "dist",
+  "env_files",
+  "node_modules",
+  "site-packages",
+  "tmp",
+  "venv",
 ]
 
-line-length = 119
 indent-width = 4
+line-length  = 119
 
 target-version = "py313"
 
 [tool.ruff.lint]
-select = ["ALL"]
 ignore = ["D", "DOC", "T201"]
+select = ["ALL"]
 
-fixable = ["ALL"]
+fixable   = ["ALL"]
 unfixable = []
 
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
 [tool.ruff.format]
-quote-style = "double"
-indent-style = "space"
+docstring-code-format     = false
+indent-style              = "space"
+line-ending               = "auto"
+quote-style               = "double"
 skip-magic-trailing-comma = false
-line-ending = "auto"
-docstring-code-format = false
