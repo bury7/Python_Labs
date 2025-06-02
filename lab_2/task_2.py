@@ -21,8 +21,12 @@ def generate_file_hashes(*file_paths: str) -> dict[str, str]:
     return file_hashes
 
 
-if __name__ == "__main__":
+def main() -> None:
     hashes = generate_file_hashes("apache_logs.txt", "README.md")
     print("Generated hash for files:")
     for path, hash_value in hashes.items():
         print(f"{path}: {hash_value}")
+
+
+if __name__ == "__main__":
+    main()

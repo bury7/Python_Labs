@@ -28,11 +28,14 @@ def filter_ips(input_file_path: str, output_file_path: str, allowed_ips: list[st
         print(f"Error: Could not write to output file - {output_file_path}")
 
 
-
-if __name__ == "__main__":
+def main() -> None:
     allowed = ["83.149.9.216", "121.107.188.202", "50.180.79.170", "208.115.111.72"]
 
     filter_ips("apache_logs.txt", "filtered_output.txt", allowed)
 
     print("Filtered IP counts:")
     print(Path("filtered_output.txt").read_text(encoding="utf-8"))
+
+
+if __name__ == "__main__":
+    main()

@@ -70,9 +70,8 @@ class GuestUser(User):
         return False
 
 
-if __name__ == "__main__":
+def main() -> None:
     ac = AccessControl()
-
     admin = Administrator("admin", "admin", access_control=ac)
     ac.add_user(admin)
 
@@ -90,3 +89,7 @@ if __name__ == "__main__":
 
     guest_auth = admin.authenticate_any_user("guest", "any")
     print("Guest auth:", "BLOCKED" if guest_auth is None else "ERROR")
+
+
+if __name__ == "__main__":
+    main()

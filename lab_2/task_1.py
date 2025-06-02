@@ -22,8 +22,12 @@ def analyze_log_file(log_file_path: str) -> dict:
     return dict(status_codes)
 
 
-if __name__ == "__main__":
+def main() -> None:
     result = analyze_log_file("apache_logs.txt")
     print("HTTP response code counts:")
     for code, count in result.items():
         print(f"{code}: {count}")
+
+
+if __name__ == "__main__":
+    main()
