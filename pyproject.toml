@@ -1,7 +1,7 @@
 [project]
 authors     = [{name = "Artem Nizhyvenko", email = "artem_nizhyvenko@proton.me"}]
 description = "University python labs"
-name        = "python-labs"
+name        = "Python_Labs"
 readme      = "README.md"
 version     = "0.1.0"
 
